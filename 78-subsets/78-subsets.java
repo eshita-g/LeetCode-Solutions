@@ -2,7 +2,7 @@ class Solution {
     public List<List<Integer>> subsets(int[] nums) {
       
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
-        LinkedList<Integer> temp = new LinkedList();
+        ArrayList<Integer> temp = new ArrayList();
         recurse(ans,temp,nums,0);
         
         return ans;
@@ -10,7 +10,7 @@ class Solution {
         
     }
     
-    public void recurse(List<List<Integer>> ans,LinkedList <Integer> temp,int[] nums,int index)
+    public void recurse(List<List<Integer>> ans,ArrayList <Integer> temp,int[] nums,int index)
     {
         if(index == nums.length)
         {
