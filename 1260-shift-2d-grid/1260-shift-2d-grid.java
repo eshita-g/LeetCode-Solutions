@@ -13,12 +13,14 @@ class Solution {
             }
         }
         List<List<Integer>> outer = new ArrayList<>();
+        int p =0;
         for(int i=0;i<grid.length;i++)
         {
             List inner = new ArrayList<>();
             for(int j=0;j<grid[i].length;j++)
             {
-                inner.add(arr[j+i*cols]);
+                inner.add(arr[p]);
+                p++;
             }
             outer.add(inner);
         }
