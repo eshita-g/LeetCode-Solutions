@@ -12,9 +12,7 @@ class Solution {
             g[s2.charAt(i) - 'a']++;
         }
         if(Arrays.equals(f,g))
-            return true;
-        else
-        {    
+            return true;    
         for(int i=n;i<m;i++)
         {
             g[s2.charAt(i) - 'a']++;
@@ -22,7 +20,7 @@ class Solution {
             if(Arrays.equals(f,g))
                 return true;
         }
-        }    
+           
         
         return false;
         
