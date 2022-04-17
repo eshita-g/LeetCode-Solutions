@@ -19,20 +19,20 @@ class Solution {
             str[i] = A.get(digits.charAt(i) - '0');
             
         }
-        Comb(str,0,"",ans);
+        Comb(str,0,"",ans,digits);
         return ans;
         
     }
-    public static void Comb(String[] str,int i,String pre,ArrayList<String> ans)
+    public static void Comb(String[] str,int i,String pre,ArrayList<String> ans,String digits)
     {
-        if(i == str.length)
+        if(i == digits.length())
         {
             ans.add(pre);
             return;
         }
         for(int j=0;j<str[i].length();j++)
         {
-            Comb(str,i+1,pre+str[i].charAt(j),ans);
+            Comb(str,i+1,pre+str[i].charAt(j),ans,digits);
         }
         
         return;
