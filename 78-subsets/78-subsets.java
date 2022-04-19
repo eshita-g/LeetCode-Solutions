@@ -1,25 +1,25 @@
 class Solution {
-    public List<List<Integer>> subsets(int[] nums) {
-      
-        List<List<Integer>> ans = new ArrayList<List<Integer>>();
-        ArrayList<Integer> temp = new ArrayList();
-        recurse(ans,temp,nums,0);
-        
-        return ans;
-        
-        
-    }
     
-    public void recurse(List<List<Integer>> ans,ArrayList <Integer> temp,int[] nums,int index)
-    {
-        if(index == nums.length)
+    public boolean checkBit(int i,int j)
         {
-            ans.add(new ArrayList<Integer>(temp));
-            return;
+            return (i>>j)%2!=0;
         }
-        temp.add(nums[index]);
-        recurse(ans,temp,nums,index+1);
-        temp.remove(temp.size() - 1);
-        recurse(ans,temp,nums,index+1);
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res =new ArrayList<>();
+        for(int i=0;i<(1<<nums.length);i++)
+        {
+            List<Integer> al = new ArrayList<>();
+            for(int j=0;j<nums.length;j++)
+            {
+                if(checkBit(i,j))
+                {
+                    al.add(nums[j]);
+                }
+            }
+            
+            res.add(al);
+        }
+        
+        return res;
     }
 }
