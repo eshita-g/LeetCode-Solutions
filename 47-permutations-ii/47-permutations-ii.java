@@ -9,6 +9,7 @@ class Solution {
                 out.add(nums[k]);
             }
             res.add(out);
+            return;
             
         }
         int[] freq = new int[21];
