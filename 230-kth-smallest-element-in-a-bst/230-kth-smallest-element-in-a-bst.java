@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    static int res;
+    static int res = 0;
     static int c = 0;
     public void traverse(TreeNode root,int k)
     {
@@ -25,7 +25,7 @@ class Solution {
         if(c == k)
         {
             res = root.val;
-            //return;
+            return;
         }
         traverse(root.right,k);
         
@@ -33,10 +33,9 @@ class Solution {
         
     
     public int kthSmallest(TreeNode root, int k) {
-        
+       
         c = 0;
         res = 0;
-    
         traverse(root,k);
         
         return res;
