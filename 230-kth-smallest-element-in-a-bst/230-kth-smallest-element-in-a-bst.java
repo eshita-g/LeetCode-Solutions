@@ -34,8 +34,7 @@ class Solution {
     
     public int kthSmallest(TreeNode root, int k) {
        
-        c = 0;
-        res = 0;
+        
         traverse(root,k);
         
         return res;
