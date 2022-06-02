@@ -14,8 +14,8 @@
  * }
  */
 class Solution {
-    static int res = 0;
-    static int c = 0;
+     int res = 0;
+     int c = 0;
     public void traverse(TreeNode root,int k)
     {
         if(root == null)
