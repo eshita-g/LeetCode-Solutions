@@ -29,8 +29,10 @@ class Solution {
         addElement(root1,l1);
         addElement(root2,l2);
         List<Integer> res = new ArrayList<Integer>();
+        int n1 = l1.size();
+        int n2 = l2.size();
         int i =0,j=0;
-        while(i<l1.size() && j<l2.size())
+        while(i<n1 && j<n2)
         {
             if(l1.get(i) < l2.get(j))
             {
@@ -43,8 +45,8 @@ class Solution {
                 j++;
             }
         }
-        res.addAll(l1.subList(i,l1.size()));
-        res.addAll(l2.subList(j,l2.size()));
+        res.addAll(l1.subList(i,n1));
+        res.addAll(l2.subList(j,n2));
         return res;
         
     }
