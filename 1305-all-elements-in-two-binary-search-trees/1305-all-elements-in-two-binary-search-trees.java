@@ -45,16 +45,8 @@ class Solution {
                 j++;
             }
         }
-        while(i<n1)
-        {
-            res.add(l1.get(i));
-            i++;
-        }
-        while(j<n2)
-        {
-            res.add(l2.get(j));
-            j++;
-        }
+        res.addAll(l1.subList(i,n1));
+        res.addAll(l2.subList(j,n2));
         return res;
         
     }
