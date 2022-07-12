@@ -45,7 +45,7 @@ class Solution {
             {
                 maxSum = sum;
                 maxLevel = level;
-                System.out.println(maxSum);
+                
             }
             level++;
         }
