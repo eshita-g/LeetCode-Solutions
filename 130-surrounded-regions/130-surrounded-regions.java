@@ -45,7 +45,7 @@ class Solution {
     }
     public void dfs(int i,int j,char[][] grid,int[][] dir)
     {
-        if(i < 0 || i >= grid.length || j<0 || j>=grid[0].length || grid[i][j]  != 'O')
+        if(i < 0 || i >= grid.length || j<0 || j>=grid[0].length || grid[i][j]  == 'P' || grid[i][j] == 'X')
             return;
         
         grid[i][j] = 'P';
