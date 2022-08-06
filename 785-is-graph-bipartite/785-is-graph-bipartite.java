@@ -27,7 +27,6 @@ class Solution {
         {
             if(col[i] !=  color)
             {
-                System.out.println("hello");
                 bipartite = false;
             }
             return;
