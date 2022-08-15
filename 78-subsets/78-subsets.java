@@ -1,25 +1,24 @@
 class Solution {
     
-    public boolean checkBit(int i,int j)
+    public void subset(List<List<Integer>> res,List<Integer> temp,int[] nums,int i)
+    {
+        if(i ==  nums.length)
         {
-            return (i>>j)%2!=0;
+            res.add(new ArrayList<Integer>(temp));
+            return;
         }
+        temp.add(nums[i]);
+        subset(res,temp,nums,i+1);
+        temp.remove(temp.size() -1);
+        subset(res,temp,nums,i+1);
+    }
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> res =new ArrayList<>();
-        for(int i=0;i<(1<<nums.length);i++)
-        {
-            List<Integer> al = new ArrayList<>();
-            for(int j=0;j<nums.length;j++)
-            {
-                if(checkBit(i,j))
-                {
-                    al.add(nums[j]);
-                }
-            }
-            
-            res.add(al);
-        }
+        int n = nums.length;
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> temp = new ArrayList<>();
+        subset(res,temp,nums,0);
         
         return res;
+        
     }
 }
