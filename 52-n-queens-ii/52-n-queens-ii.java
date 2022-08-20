@@ -26,17 +26,6 @@ class Solution {
         }
         
     }
-    public List<String> construct(char[][] board)
-    {
-        List<String> res = new ArrayList<>();
-        for(int i=0;i<board.length;i++)
-        {
-            String s = new String(board[i]);
-            res.add(s);
-        }
-        
-        return res;
-    }
     public int totalNQueens(int n) {
         
     
