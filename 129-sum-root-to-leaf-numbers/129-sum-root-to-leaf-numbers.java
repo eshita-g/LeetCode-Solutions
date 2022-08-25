@@ -25,21 +25,16 @@ class Solution {
             StringBuilder sb = new StringBuilder();
             for(int i=0;i<temp.size();i++)
             {
-                //System.out.print(temp.get(i));
                 sb.append(temp.get(i));
             }
             String s = sb.toString();
-            //System.out.println(s + " ");
             int p = Integer.parseInt(s);
-            System.out.println(p + " ");
-            
             sum = sum + p;
         }
-        else
-        {
+        
             help(root.left,temp);
             help(root.right,temp);
-        }
+    
         temp.remove(temp.size() - 1);
     }
     public int sumNumbers(TreeNode root) {
