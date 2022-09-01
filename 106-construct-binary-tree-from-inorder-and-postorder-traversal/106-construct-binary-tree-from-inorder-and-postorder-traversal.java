@@ -22,8 +22,9 @@ class Solution {
         root.left = null;
         root.right = null;
         int i = res.get(postorder[j1]);
-        root.left = build(postorder,inorder,i1,i1+i-i2-1,i2,i-1,res);
-        root.right = build(postorder,inorder,i1+i-i2,j1-1,i+1,j2,res);
+        int left = i - i2;
+        root.left = build(postorder,inorder,i1,i1+left-1,i2,i-1,res);
+        root.right = build(postorder,inorder,i1+left,j1-1,i+1,j2,res);
         
         return root;
     }
