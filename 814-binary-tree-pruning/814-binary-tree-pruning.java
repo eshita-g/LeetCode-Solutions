@@ -20,11 +20,12 @@ class Solution {
             return false;
         
         boolean left = contains(root.left);
+        boolean right = contains(root.right);
         if(left == false)
         {
             root.left = null;
         }
-        boolean right = contains(root.right);
+        
         if(right == false)
         {
             root.right = null;
