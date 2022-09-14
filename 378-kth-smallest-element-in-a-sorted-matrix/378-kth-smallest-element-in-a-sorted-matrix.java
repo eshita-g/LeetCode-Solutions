@@ -22,16 +22,11 @@ class Solution {
         while(k > 0)
         {
             int[] cur = q.poll();
-            System.out.println(cur[2]);
             ans = cur[2];
             int i = cur[0];
             int j = cur[1];
             if(j+1 < n)
             {
-                
-               System.out.println("pop");
-
-               System.out.println(matrix[i][j+1]);
 
                 q.add(new int[]{i,j+1,matrix[i][j+1]});
             }
