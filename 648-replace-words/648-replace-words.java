@@ -24,7 +24,6 @@ class Solution {
             }
             temp.word = s;
         }
-        System.out.println(root.child['b'-'a']);
 
         StringBuilder ans = new StringBuilder();
         for(String w : sentence.split("\\s+"))
@@ -40,7 +39,7 @@ class Solution {
                 if(temp.child[w.charAt(i) - 'a'] == null || temp.word != null)
                 {
                  
-                    System.out.println(temp.child[w.charAt(i) - 'a']);
+                    
                     break;
                 }
             
