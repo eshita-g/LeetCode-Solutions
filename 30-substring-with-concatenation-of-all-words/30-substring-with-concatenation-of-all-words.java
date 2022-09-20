@@ -33,7 +33,7 @@ class Solution {
                     
                 if(temp.size()  == 0)
                 {
-                                    System.out.println(temp.size());
+                    
 
                     res.add(i);
                 }
