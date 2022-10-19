@@ -13,22 +13,29 @@
  *     }
  * }
  */
-public class Solution {
+class Solution {
+    
     int max = 0;
     
+  
     public int diameterOfBinaryTree(TreeNode root) {
-        maxDepth(root);
+     
+    
+        
+        find(root);
+        
         return max;
     }
-    
-    private int maxDepth(TreeNode root) {
-        if (root == null) return 0;
+      public int find(TreeNode root)
+    {
+        if(root == null)
+            return 0;
         
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
+        int left = find(root.left);
+        int right = find(root.right);
         
-        max = Math.max(max, left + right);
+        max = Math.max(max,left+right);
         
-        return Math.max(left, right) + 1;
+        return Math.max(left,right) + 1;
     }
 }
