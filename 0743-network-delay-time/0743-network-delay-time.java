@@ -46,7 +46,7 @@ class Solution {
         for(int i=1;i<=n;i++)
         {
             res = Math.max(res,dis[i]);
-            System.out.println(dis[i]);
+            //System.out.println(dis[i]);
             
         }
         
