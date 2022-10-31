@@ -10,7 +10,8 @@ class Solution {
             
             mp.putIfAbsent(src,new HashMap<>());
             mp.get(src).put(des,w);
-            mp.putIfAbsent(des,new HashMap<>());
+            mp.putIfAbsent(des,new HashMap<>());  //undirected graphs that's why we need to store both 
+                                                     
             mp.get(des).put(src,w);
         }
         int[] dis = new int[n];
