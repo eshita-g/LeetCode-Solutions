@@ -47,85 +47,52 @@ class DriverClass
 
 
 // User function Template for Java
-class Edge implements Comparable<Edge>{
-
-    int src;
-    int dest;
-    int wt;
-    Edge(int src,int dest,int wt)
+class Pair{
+    
+    int node;
+    int distance;
+    Pair(int node,int distance)
     {
-        this.src = src;
-        this.dest = dest;
-        this.wt = wt;
-    }
-    public int compareTo(Edge compareEdge){
-     
-     return this.wt - compareEdge.wt;   
+        this.node = node;
+        this.distance = distance;
     }
 }
+
 class Solution
 {
-    public static int findPar(int u,int[] par)
-    {
-        while(par[u] != u)
-        {
-            u = par[u];
-        }
-        
-        return u;
-    
-    }
-    public static void union(int u,int v,int[] par,int[] size)
-    {
-        u = findPar(u,par);
-        v = findPar(v,par);
-        if(size[u] > size[v])
-        {
-            par[v] = u; 
-            size[u] = size[u] + size[v];
-        }
-        else
-        {
-            par[u] = v;
-            size[v] = size[u] + size[v];
-        }
-    }
     //Function to find sum of weights of edges of the Minimum Spanning Tree.
     static int spanningTree(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj) 
     {
         // Add your code here
-        List<Edge> edges = new ArrayList<>();
-        for(int i=0;i<V;i++)
+        
+        PriorityQueue<Pair> q = new PriorityQueue<>((x,y) -> x.distance - y.distance);
+        q.add(new Pair(0,0));
+        int sum = 0;
+        int[] vis = new int[V];
+        while(!q.isEmpty())
         {
+            Pair p = q.remove();
+            int i =p.node;
+            int k = p.distance;
+            
+            if(vis[i] == 1) {
+                continue;
+            }
+            
+            vis[i] = 1;
+            sum = sum + k;
             for(int j=0;j<adj.get(i).size();j++)
             {
-                int adjNode =adj.get(i).get(j).get(0);
                 int wt = adj.get(i).get(j).get(1);
-                Edge temp = new Edge(i,adjNode,wt);
-                edges.add(temp);
-            }
-        }
-        Collections.sort(edges);
-        int[] par = new int[V];
-        int[] size = new int[V];
-        for(int i=0;i<V;i++)
-        {
-            par[i] = i;
-            size[i] = 1;
-        }
-        int cost = 0;
-        for(int i=0;i<edges.size();i++)
-        {
-            int a = edges.get(i).src;
-            int b = edges.get(i).dest;
-            
-            if(findPar(a,par) != findPar(b,par))
-            {
-                cost = cost + edges.get(i).wt;
-                union(a,b,par,size);
+                int adjNode = adj.get(i).get(j).get(0);
+                
+                if(vis[adjNode] == 0)
+                {
+                    q.add(new Pair(adjNode,wt));
+                }
             }
         }
         
-        return cost;
+        return sum;
     }
 }
