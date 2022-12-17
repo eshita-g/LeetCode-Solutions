@@ -42,7 +42,7 @@ class Solution{
                 int number = q.remove();
                 p--;
                 String num = String.valueOf(number);
-                if(!visited.add(num.toString()))
+                if(!visited.add(num))
                 {
                     continue;
                 }
