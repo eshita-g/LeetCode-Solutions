@@ -34,8 +34,6 @@ class Solution {
         while(!q.isEmpty())
         {
             int t = q.size();
-            System.out.println(count);
-            ;
             count++;
             while(t > 0)
             {
