@@ -19,10 +19,11 @@ class Solution {
         int[][] vis = new int[m][n];
         while(!q.isEmpty())
         {
-            int size = q.size();
-            for(int i=0;i<size;i++)
+            int t = q.size();
+            while(t > 0)
             {
 
+                t--;
                 int[] p = q.remove();
                 
                 int x = p[0];
