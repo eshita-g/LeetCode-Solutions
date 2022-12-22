@@ -26,7 +26,7 @@ class Solution {
         {
             int p = q.size();
             List<Integer> l = new ArrayList<>();
-            while(p-- > 0)
+            for(int i=0;i<p;i++)
             {
                 TreeNode ptr = q.remove();
                 l.add(ptr.val);
