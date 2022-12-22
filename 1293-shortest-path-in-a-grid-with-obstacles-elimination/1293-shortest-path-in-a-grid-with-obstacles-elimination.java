@@ -45,7 +45,7 @@ class Solution {
                 {
                     q.add(new int[]{x,y+1,z-grid[x][y+1]});
                 }
-             
+        
             }
             res++;
         }
