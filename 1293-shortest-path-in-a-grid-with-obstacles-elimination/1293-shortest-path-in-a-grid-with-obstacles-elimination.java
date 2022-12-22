@@ -11,8 +11,9 @@ class Solution {
         while(!q.isEmpty())
         {
             int size = q.size();
-            for(int i=0;i<size;i++)
+            while(size > 0)
             {
+                size--;
                 int[] p = q.remove();
                 int x = p[0];
                 int y = p[1];
