@@ -31,7 +31,7 @@ class Solution {
                 
                 if(grid[x][y] == '#')
                 {
-                    System.out.println("hi");
+                    //System.out.println("hi");
                     return res;
                 }
                 if(vis[x][y] == 1)
