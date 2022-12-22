@@ -22,6 +22,7 @@ class Solution {
             int size = q.size();
             for(int i=0;i<size;i++)
             {
+
                 int[] p = q.remove();
                 
                 int x = p[0];
@@ -54,7 +55,9 @@ class Solution {
                 {
                     q.add(new int[]{x,y+1});
                 }
+            
             }
+            
             res++;
         }
         
