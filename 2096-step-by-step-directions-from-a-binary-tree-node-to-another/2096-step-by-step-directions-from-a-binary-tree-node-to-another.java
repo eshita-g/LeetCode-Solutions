@@ -64,7 +64,6 @@ class Solution {
         
         TreeNode lcaNode = lcaFind(root,startValue,destValue);
         
-        System.out.println(lcaNode.val);
         
         StringBuilder s1 = new StringBuilder();
         
@@ -74,7 +73,7 @@ class Solution {
         
         findPath(lcaNode,destValue,s2);
         
-      // System.out.println(s1);
+
        System.out.println(s2);
         
         for(int i=0;i<s1.length();i++)
