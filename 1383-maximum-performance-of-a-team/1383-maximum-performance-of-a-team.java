@@ -11,6 +11,7 @@ class Solution {
         PriorityQueue<Integer> q = new PriorityQueue<>();
         long res = 0;
         long sum = 0;
+        int mod = 1000000007;
         for(int i=0;i<n;i++)
         {
             q.add(players[i][1]);
@@ -23,6 +24,6 @@ class Solution {
             res = Math.max(res, sum*players[i][0]);
         }
         
-        return (int) (res % 1000000007);
+        return (int) (res % mod);
     }
 }
