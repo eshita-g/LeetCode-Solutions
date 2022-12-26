@@ -5,7 +5,7 @@ class MedianFinder {
     
     public MedianFinder() {
         
-        q1 = new PriorityQueue<>((a,b) -> b-a);
+        q1 = new PriorityQueue<>((a,b) -> b - a);
         q2 = new PriorityQueue<>();
         
     }
