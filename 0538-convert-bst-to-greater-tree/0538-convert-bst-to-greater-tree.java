@@ -25,7 +25,7 @@ class Solution {
 
         sum = sum + root.val;
         root.val = sum;
-        System.out.println(sum);
+        //System.out.println(sum);
         helper(root.left);
         
     }
