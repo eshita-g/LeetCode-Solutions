@@ -17,7 +17,6 @@ class Solution {
             if(vis[x] ==0)
             {
                 dfs(x,des,temp,res,graph,vis);
-                //vis[x] = 0;
         
             }
         }
