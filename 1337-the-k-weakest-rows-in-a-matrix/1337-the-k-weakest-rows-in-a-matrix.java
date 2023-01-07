@@ -33,7 +33,6 @@ class Solution {
         for(int i=0;i<n;i++)
         {
             soldiers = binary(mat[i]) + 1;
-            System.out.println(soldiers);
             dp[i][0] = soldiers;
             dp[i][1] = i;
         }
