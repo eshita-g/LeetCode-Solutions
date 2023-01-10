@@ -25,7 +25,6 @@ class Solution {
         while(!q.isEmpty())
         {
             int p = q.size();
-            List<Integer> ans = new ArrayList<>();
             while(p > 0)
             {
                 TreeNode ptr = q.remove();
