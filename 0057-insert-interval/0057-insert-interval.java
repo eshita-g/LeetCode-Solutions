@@ -5,7 +5,7 @@ class Solution {
         int f = 0;
         for(int i=0;i<intervals.length;i++)
         {
-            if(intervals[i][0] > newInterval[0])
+            if(intervals[i][0] > newInterval[0] && f == 0)
             {
                 System.out.println("hi");
                 res.add(newInterval);
@@ -14,6 +14,7 @@ class Solution {
             res.add(intervals[i]);
             
         }
+
         if(f==0)
         {
             res.add(newInterval);
