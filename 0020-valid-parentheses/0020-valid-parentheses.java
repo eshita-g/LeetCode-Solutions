@@ -10,7 +10,7 @@ class Solution {
             {
                 st.push(s.charAt(i));
             }
-            else if(s.charAt(i) == ')'|| s.charAt(i) == '}' || s.charAt(i) == ']')
+            else 
             {
                 if(st.isEmpty())
                     return false;
