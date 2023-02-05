@@ -38,7 +38,7 @@ class Solution {
                 {
                     q.add(ptr.right);
                 }
-                //p = p - 1;
+            
             }
             res.add(l);
         }
