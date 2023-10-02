@@ -9,12 +9,15 @@ class Solution {
         for(int i=0;i<n;i++){
             
             sum = sum + nums[i];
-            if(!mp.containsKey(sum%k)){
-               mp.put((sum%k),i+1); 
+            if(mp.containsKey(sum%k)){
                 
+                if(mp.get(sum%k) < i){
+                    return true;
+                }
             }
-            else if(mp.get(sum%k) < i)
-                return true;
+            else if(!mp.containsKey(sum%k)){
+                mp.put((sum%k),i+1);
+            }
         }
         
         return false;
