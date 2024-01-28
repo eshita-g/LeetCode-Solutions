@@ -32,10 +32,7 @@ class Solution {
                 l = mid + 1;
             }
         }
-        System.out.println(neg);
         pos = n - pos;
-        
-        
         if(pos > neg)
             return pos;
         
