@@ -2,7 +2,7 @@ class Solution {
     public void subset(List<List<Integer>> res,List<Integer> temp,int[] nums,int ind)
     {
 
-            res.add(new ArrayList<>(temp));
+        res.add(new ArrayList<>(temp));
             
         for(int i = ind;i<nums.length;i++)
         {
